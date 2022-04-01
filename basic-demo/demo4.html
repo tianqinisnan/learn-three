@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- HTML Meta Tags -->
+    <title>demo - shanshan</title>
+
+    <!--     Basic Three.js -->
+    <script src="./vendors/three.js"></script>
+    <!--     GLTF Loader for Three.js -->
+    <script src="./vendors/GLTFLoader.js"></script>
+    <!--     Orbit Controls for Three.js -->
+    <script src="./vendors/OrbitControls.js"></script>
+  </head>
+  <body>
+    
+    <script type="module">
+      var animationClip, clipAction
+      var mixer = new THREE.AnimationMixer()
+      var clock = new THREE.Clock()
+      // renderer
+      const renderer = new THREE.WebGLRenderer({ alpha: true });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setPixelRatio(window.devicePixelRatio);
+      document.body.appendChild(renderer.domElement);
+      // camera
+      const orbitCamera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
+      orbitCamera.position.set(0, 0, 3);
+      orbitCamera.lookAt(0, 10, 0)
+      //scene
+      const scene = new THREE.Scene();
+      scene.background = new THREE.Color( 0xc8c8c8 );
+      // light
+      const light = new THREE.DirectionalLight(0xffffff);
+      light.position.set(0, 1, 10).normalize();
+      scene.add(light);
+      const light1 = new THREE.DirectionalLight(0xffffff, 0.2);
+      light1.position.set(0, 1, -10).normalize();
+      scene.add(light1);
+      const light2 = new THREE.AmbientLight(0xffffff, 0.3);
+      scene.add(light2);
+      
+      const axesHelper = new THREE.AxesHelper(8)
+      scene.add(axesHelper)
+
+      function animate() {
+        var delta = clock.getDelta()
+        mixer.update(delta)
+        requestAnimationFrame(animate);
+        renderer.render(scene, orbitCamera);
+      }
+      animate();
+
+      // const texture = new THREE.TextureLoader().load( './public/img/hair_normal.jpg' );
+      const texture = new THREE.TextureLoader().load( './public/img/hair.jpg' );
+      const material = new THREE.MeshStandardMaterial({ map: texture })
+      const texture2 = new THREE.TextureLoader().load( './public/img/body.jpg' );
+      const material2 = new THREE.MeshBasicMaterial({ map: texture2 })
+      const texture2_1 = new THREE.TextureLoader().load( './public/img/nail.jpg' );
+      const material2_1 = new THREE.MeshStandardMaterial({ map: texture2_1 })
+      const texture3 = new THREE.TextureLoader().load( './public/img/silver.jpg' );
+      const material3 = new THREE.MeshStandardMaterial({ map: texture3 })
+      const texture4 = new THREE.TextureLoader().load( './public/img/eye_light.jpg' );
+      const material4 = new THREE.MeshStandardMaterial({map: texture4})
+      material4.opacity = 0
+      const texture4_2 = new THREE.TextureLoader().load( './public/img/blue.jpg' );
+      const material4_2 = new THREE.MeshStandardMaterial({map: texture4_2})
+      const texture4_3 = new THREE.TextureLoader().load( './public/img/deep_blue.jpg' );
+      const material4_3 = new THREE.MeshStandardMaterial({map: texture4_3})
+      const texture5 = new THREE.TextureLoader().load( './public/img/cloth.jpg' );
+      const material5 = new THREE.MeshStandardMaterial({map: texture5})
+      const texture6 = new THREE.TextureLoader().load( './public/img/white.jpg' );
+      const material6 = new THREE.MeshStandardMaterial({map: texture6})
+      const texture7 = new THREE.TextureLoader().load( './public/img/black.jpg' );
+      const material7 = new THREE.MeshStandardMaterial({map: texture7})
+      const texture8 = new THREE.TextureLoader().load( './public/img/highlight_cloth.jpg' );
+      const material8 = new THREE.MeshStandardMaterial({map: texture8})
+      const texture9 = new THREE.TextureLoader().load( './public/img/face_light.jpg' );
+      const material9 = new THREE.MeshStandardMaterial({map: texture9})
+
+      // Import Character GLTF
+      const loader = new THREE.GLTFLoader();
+      loader.load(
+          "./public/shanshan.glb",
+
+          (gltf) => {
+            const children = gltf.scene.children[0].children
+            children[2].material = material //hair
+            children[1].children[0].material = material2 //body
+            children[1].children[1].material = material2_1 //nail
+            children[3].material = material3 //gloves
+            children[6].material = material3 //dress
+            children[5].children[0].material = material6 //glass
+            children[5].children[2].material = material4_2
+            children[5].children[3].material = material4_3
+            children[7].children[1].material = material5 //cloth
+            children[7].children[0].material = material6 //cloth
+            children[4].children[0].material = material3 //shoes left
+            children[4].children[1].material = material3 //shoes left
+            children[4].children[2].material = material7 //shoes left
+            children[4].children[3].material = material8 //shoes left
+            children[8].children[0].material = material3 //shoes right
+            children[8].children[1].material = material3 //shoes right
+            children[8].children[2].material = material7 //shoes right
+            children[8].children[3].material = material8 //shoes right
+            // children[9].children[0].material = material2 //head
+            // children.splice(5, 1)
+            scene.add(gltf.scene);
+            mixer = new THREE.AnimationMixer(gltf.scene)
+            // mixer.time = 2
+            // mixer.clipAction(gltf.animations[0]).play()
+            clipAction = mixer.clipAction(gltf.animations[0])
+            clipAction.time = 3.5
+            clipAction.loop = THREE.LoopPingPong //THREE.LoopOnce THREE.LoopRepeat THREE.LoopPingPong
+            clipAction.play()
+            animationClip = clipAction.getClip()
+            animationClip.duration = 10
+            // setTimeout(() => {
+            //   console.log(clipAction)
+            //   clipAction.paused = true
+            // }, 5000)
+            // animationClip = clipAction.getClip()
+            console.log(gltf, clipAction, clipAction.getClip())
+            // mixer.timeScale = -1
+          },
+
+          (progress) => console.log("Loading model...", 100.0 * (progress.loaded / progress.total), "%"),
+
+          (error) => console.error(error)
+      );
+
+      const controls = new THREE.OrbitControls( orbitCamera, renderer.domElement );
+      controls.addEventListener( 'change', () => {renderer.render(scene, orbitCamera)} ); // use if there is no animation loop
+      controls.minDistance = 2;
+      controls.maxDistance = 10;
+      controls.target.set( 0, 0.8, 0 );
+      controls.update();
+    </script>
+  </body>
+</html>

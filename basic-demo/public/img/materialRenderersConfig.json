@@ -1,0 +1,2663 @@
+{
+	"materialrenderers": [{
+			"name": "JD/Particles/Add",
+			"queue": 3000,
+			"pass": [{
+				"blendenalble": true,
+				"blendsrc": "one",
+				"blenddst": "one",
+				"zwrite": false,
+				"ztest": "lessequal",
+				"cull": "back",
+				"colormask": {
+					"r": true,
+					"g": true,
+					"b": true,
+					"a": true
+				},
+				"programid": 0
+			}]
+		},
+		{
+			"name": "JD/Particles/Transparent",
+			"queue": 3000,
+			"pass": [{
+				"blendenalble": true,
+				"blendsrc": "srcalpha",
+				"blenddst": "oneminussrcalpha",
+				"zwrite": false,
+				"ztest": "lessequal",
+				"cull": "back",
+				"colormask": {
+					"r": true,
+					"g": true,
+					"b": true,
+					"a": true
+				},
+				"programid": 1
+			}]
+		},
+		{
+			"name": "JD/PBS 2.0/Standard",
+			"queue": 2000,
+			"pass": [{
+				"blendenalble": false,
+				"blendsrc": "srcalpha",
+				"blenddst": "oneminussrcalpha",
+				"zwrite": true,
+				"ztest": "lessequal",
+				"cull": "back",
+				"colormask": {
+					"r": true,
+					"g": true,
+					"b": true,
+					"a": true
+				},
+				"programid": 2
+			}]
+		},
+		{
+			"name": "JD/PBS 2.0/Standard Transparent",
+			"queue": 3000,
+			"pass": [{
+				"blendenalble": true,
+				"blendsrc": "srcalpha",
+				"blenddst": "oneminussrcalpha",
+				"zwrite": false,
+				"ztest": "lessequal",
+				"cull": "back",
+				"colormask": {
+					"r": true,
+					"g": true,
+					"b": true,
+					"a": true
+				},
+				"programid": 2
+			}]
+		},
+		{
+			"name": "JD/PBS 2.0/Standard Bumped",
+			"queue": 2000,
+			"pass": [{
+				"blendenalble": false,
+				"blendsrc": "srcalpha",
+				"blenddst": "oneminussrcalpha",
+				"zwrite": true,
+				"ztest": "lessequal",
+				"cull": "back",
+				"colormask": {
+					"r": true,
+					"g": true,
+					"b": true,
+					"a": true
+				},
+				"programid": 3
+			}]
+		},
+		{
+			"name": "JD/PBS 2.0/Standard Bumped Transparent",
+			"queue": 3000,
+			"pass": [{
+				"blendenalble": true,
+				"blendsrc": "srcalpha",
+				"blenddst": "oneminussrcalpha",
+				"zwrite": false,
+				"ztest": "lessequal",
+				"cull": "back",
+				"colormask": {
+					"r": true,
+					"g": true,
+					"b": true,
+					"a": true
+				},
+				"programid": 3
+			}]
+		},
+		{
+			"name": "JD/PBS 2.0/Standard Glass",
+			"queue": 3000,
+			"pass": [{
+				"blendenalble": true,
+				"blendsrc": "srcalpha",
+				"blenddst": "oneminussrcalpha",
+				"zwrite": false,
+				"ztest": "lessequal",
+				"cull": "back",
+				"colormask": {
+					"r": true,
+					"g": true,
+					"b": true,
+					"a": true
+				},
+				"programid": 4
+			}]
+		},
+		{
+			"name": "JD/PBS 2.0/Standard Bumped Glass",
+			"queue": 3000,
+			"pass": [{
+				"blendenalble": true,
+				"blendsrc": "srcalpha",
+				"blenddst": "oneminussrcalpha",
+				"zwrite": false,
+				"ztest": "lessequal",
+				"cull": "back",
+				"colormask": {
+					"r": true,
+					"g": true,
+					"b": true,
+					"a": true
+				},
+				"programid": 5
+			}]
+		},
+		{
+			"name": "JD/Cartoon/Ramp",
+			"queue": 2000,
+			"pass": [{
+				"blendenalble": false,
+				"blendsrc": "srcalpha",
+				"blenddst": "oneminussrcalpha",
+				"zwrite": true,
+				"ztest": "lessequal",
+				"cull": "back",
+				"colormask": {
+					"r": true,
+					"g": true,
+					"b": true,
+					"a": true
+				},
+				"programid": 6
+			}]
+		},
+		{
+			"name": "JD/Cartoon/Ramp Transparent",
+			"queue": 3000,
+			"pass": [{
+				"blendenalble": true,
+				"blendsrc": "srcalpha",
+				"blenddst": "oneminussrcalpha",
+				"zwrite": false,
+				"ztest": "lessequal",
+				"cull": "back",
+				"colormask": {
+					"r": true,
+					"g": true,
+					"b": true,
+					"a": true
+				},
+				"programid": 6
+			}]
+		},
+		{
+			"name": "JD/Cartoon/Hair",
+			"queue": 2000,
+			"pass": [{
+				"blendenalble": false,
+				"blendsrc": "srcalpha",
+				"blenddst": "oneminussrcalpha",
+				"zwrite": true,
+				"ztest": "lessequal",
+				"cull": "off",
+				"colormask": {
+					"r": true,
+					"g": true,
+					"b": true,
+					"a": true
+				},
+				"programid": 7
+			}]
+		},
+		{
+			"name": "JD/Cartoon/Hair Transparent",
+			"queue": 3000,
+			"pass": [
+				{
+					"blendenalble": false,
+					"blendsrc": "srcalpha",
+					"blenddst": "oneminussrcalpha",
+					"zwrite": true,
+					"ztest": "lessequal",
+					"cull": "off",
+					"colormask": {
+						"r": true,
+						"g": true,
+						"b": true,
+						"a": true
+					},
+					"programid": 8
+				},
+				{
+					"blendenalble": true,
+					"blendsrc": "srcalpha",
+					"blenddst": "oneminussrcalpha",
+					"zwrite": false,
+					"ztest": "lessequal",
+					"cull": "front",
+					"colormask": {
+						"r": true,
+						"g": true,
+						"b": true,
+						"a": true
+					},
+					"programid": 7
+				},
+				{
+					"blendenalble": true,
+					"blendsrc": "srcalpha",
+					"blenddst": "oneminussrcalpha",
+					"zwrite": false,
+					"ztest": "lessequal",
+					"cull": "back",
+					"colormask": {
+						"r": true,
+						"g": true,
+						"b": true,
+						"a": true
+					},
+					"programid": 7
+				}
+			]
+		},
+		{
+			"name": "JD/Cartoon/Eyes",
+			"queue": 2000,
+			"pass": [{
+				"blendenalble": false,
+				"blendsrc": "srcalpha",
+				"blenddst": "oneminussrcalpha",
+				"zwrite": true,
+				"ztest": "lessequal",
+				"cull": "back",
+				"colormask": {
+					"r": true,
+					"g": true,
+					"b": true,
+					"a": true
+				},
+				"programid": 9
+			}]
+		},
+		{
+			"name": "JD/Cartoon/Skin",
+			"queue": 2000,
+			"pass": [{
+				"blendenalble": false,
+				"blendsrc": "srcalpha",
+				"blenddst": "oneminussrcalpha",
+				"zwrite": true,
+				"ztest": "lessequal",
+				"cull": "back",
+				"colormask": {
+					"r": true,
+					"g": true,
+					"b": true,
+					"a": true
+				},
+				"programid": 10
+			}]
+		}
+	],
+	"programs": [
+		{
+			"vshpath": "es2/particleAdd.vs",
+			"fshpath": "es2/particleAdd.fs",
+			"es3vshpath": "es3/particleAdd.vs",
+			"es3fshpath": "es3/particleAdd.fs",
+			"metalvshpath": "metal/particleAdd_vs.metal",
+			"metalfshpath": "metal/particleAdd_fs.metal",
+			"uniforms": [
+                {
+					"name": "_MVP",
+					"semantic": "_MVP"
+				},
+				{
+					"name": "albedo_uv",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 0,
+						"w": 0
+					}
+				},
+				{
+					"name": "albedo",
+					"type": "sampler2D"
+				},
+				{
+					"name": "albedousage",
+					"semantic": "albedo",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "color",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1,
+						"w": 1
+					}
+				}
+			],
+			"attributes": [{
+					"name": "inPos",
+					"semantic": "inVertexPosition"
+				},
+				{
+					"name": "inVertexNormal",
+					"semantic": "inVertexNormal"
+				},
+				{
+					"name": "inTexCoord0",
+					"semantic": "inTexCoord0"
+				},
+				{
+					"name": "inVertexColor",
+					"semantic": "inVertexColor"
+				}
+			]
+		},
+		{
+			"vshpath": "es2/particleTransparent.vs",
+			"fshpath": "es2/particleTransparent.fs",
+			"es3vshpath": "es3/particleTransparent.vs",
+			"es3fshpath": "es3/particleTransparent.fs",
+			"metalvshpath": "metal/particleTransparent_vs.metal",
+			"metalfshpath": "metal/particleTransparent_fs.metal",
+			"uniforms": [{
+					"name": "_MVP",
+					"semantic": "_MVP"
+				},
+				{
+					"name": "albedo_uv",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 0,
+						"w": 0
+					}
+				},
+				{
+					"name": "albedo",
+					"type": "sampler2D"
+				},
+				{
+					"name": "albedousage",
+					"semantic": "albedo",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "color",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1,
+						"w": 1
+					}
+				}
+			],
+			"attributes": [{
+					"name": "inPos",
+					"semantic": "inVertexPosition"
+				},
+				{
+					"name": "inVertexNormal",
+					"semantic": "inVertexNormal"
+				},
+				{
+					"name": "inTexCoord0",
+					"semantic": "inTexCoord0"
+				},
+				{
+					"name": "inVertexColor",
+					"semantic": "inVertexColor"
+				},
+				{
+					"name": "inVertexBinormal",
+					"semantic": "inVertexBinormal"
+				}
+			]
+		},
+		{
+			"vshpath": "es2/newStandard.vs",
+			"fshpath": "es2/newStandard.fs",
+			"es3vshpath": "es3/newStandard.vs",
+			"es3fshpath": "es3/newStandard.fs",
+			"metalvshpath": "metal/newStandard_vs.metal",
+			"metalfshpath": "metal/newStandard_fs.metal",
+			"uniforms": [{
+					"name": "_MVP",
+					"semantic": "_MVP"
+				},
+				{
+					"name": "_M",
+					"semantic": "_M"
+				},
+				{
+					"name": "_MIT",
+					"semantic": "_MIT"
+				},
+				{
+					"name": "_MVIT",
+					"semantic": "_MVIT"
+				},
+				{
+					"name": "_CameraPos",
+					"semantic": "_CameraPos"
+				},
+				{
+					"name": "color",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1,
+						"w": 1
+					}
+				},
+				{
+					"name": "albedo_uv",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 0,
+						"w": 0
+					}
+				},
+				{
+					"name": "aotex_uv",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 0,
+						"w": 0
+					}
+				},
+				{
+					"name": "albedo",
+					"type": "sampler2D"
+				},
+				{
+					"name": "albedousage",
+					"semantic": "albedo",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "usearcubemap",
+					"type": "int",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "aotex",
+					"type": "sampler2D"
+				},
+				{
+					"name": "aotexusage",
+					"semantic": "aotex",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "aointensity",
+					"type": "float",
+					"defaultvalue": {
+						"x": 1
+					}
+				},
+				{
+					"name": "lightcolor",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1,
+						"w": 1
+					}
+				},
+				{
+					"name": "lightdir",
+					"type": "vec3",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1
+					}
+				},
+				{
+					"name": "ambientcolor",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1,
+						"w": 1
+					}
+				},
+				{
+					"name": "metallictex_uv",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 0,
+						"w": 0
+					}
+				},
+				{
+					"name": "metallictex",
+					"type": "sampler2D"
+				},
+				{
+					"name": "metallictexusage",
+					"semantic": "metallictex",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "emissivetex_uv",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 0,
+						"w": 0
+					}
+				},
+				{
+					"name": "emissivetex",
+					"type": "sampler2D"
+				},
+				{
+					"name": "emissivetexusage",
+					"semantic": "emissivetex",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "ambientintensity",
+					"type": "float",
+					"defaultvalue": {
+						"x": 1
+					}
+				},
+				{
+					"name": "externalstrength",
+					"type": "float",
+					"defaultvalue": {
+						"x": 1
+					}
+				},
+				{
+					"name": "roughness",
+					"type": "float",
+					"defaultvalue": {
+						"x": 0.5
+					}
+				},
+				{
+					"name": "metallic",
+					"type": "float",
+					"defaultvalue": {
+						"x": 0.5
+					}
+				},
+				{
+					"name": "envintensity",
+					"type": "float",
+					"defaultvalue": {
+						"x": 0.5
+					}
+				},
+				{
+					"name": "envtex",
+					"type": "samplerCube"
+				},
+				{
+					"name": "envtex2",
+					"type": "samplerCube"
+				},
+				{
+					"name": "envtex2usage",
+					"semantic": "envtex2",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "envtex3",
+					"type": "samplerCube"
+				},
+				{
+					"name": "envtex3usage",
+					"semantic": "envtex2",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "envmix",
+					"type": "float",
+					"defaultvalue": {
+						"x": 0.0
+					}
+				},
+				{
+					"name": "envtexusage",
+					"semantic": "envtex",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "consta",
+					"type": "vec3",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1,
+						"w": 1
+					}
+				},
+				{
+					"name": "constb",
+					"type": "vec3",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1,
+						"w": 1
+					}
+				},
+				{
+					"name": "usemixarkitenv",
+					"type": "int",
+					"defaultvalue": {
+						"x": 1
+					}
+				}
+			],
+			"attributes": [{
+					"name": "inVertexPosition",
+					"semantic": "inVertexPosition"
+				},
+				{
+					"name": "inVertexNormal",
+					"semantic": "inVertexNormal"
+				},
+				{
+					"name": "inVertexColor",
+					"semantic": "inVertexColor"
+				},
+				{
+					"name": "inVertexTangent",
+					"semantic": "inVertexTangent"
+				},
+				{
+					"name": "inTexCoord0",
+					"semantic": "inTexCoord0"
+				},
+				{
+					"name": "inTexCoord1",
+					"semantic": "inTexCoord1"
+				},
+				{
+					"name": "inVertexBinormal",
+					"semantic": "inVertexBinormal"
+				}
+			]
+		},
+		{
+			"vshpath": "es2/newStandardBumped.vs",
+			"fshpath": "es2/newStandardBumped.fs",
+			"es3vshpath": "es3/newStandardBumped.vs",
+			"es3fshpath": "es3/newStandardBumped.fs",
+			"metalvshpath": "metal/newStandardBumped_vs.metal",
+			"metalfshpath": "metal/newStandardBumped_fs.metal",
+			"uniforms": [{
+					"name": "_MVP",
+					"semantic": "_MVP"
+				},
+				{
+					"name": "_M",
+					"semantic": "_M"
+				},
+				{
+					"name": "_MIT",
+					"semantic": "_MIT"
+				},
+				{
+					"name": "_MVIT",
+					"semantic": "_MVIT"
+				},
+				{
+					"name": "_CameraPos",
+					"semantic": "_CameraPos"
+				},
+				{
+					"name": "color",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1,
+						"w": 1
+					}
+				},
+				{
+					"name": "albedo_uv",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 0,
+						"w": 0
+					}
+				},
+				{
+					"name": "aotex_uv",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 0,
+						"w": 0
+					}
+				},
+				{
+					"name": "albedo",
+					"type": "sampler2D"
+				},
+				{
+					"name": "albedousage",
+					"semantic": "albedo",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "usearcubemap",
+					"type": "int",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "aotex",
+					"type": "sampler2D"
+				},
+				{
+					"name": "aotexusage",
+					"semantic": "aotex",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "aointensity",
+					"type": "float",
+					"defaultvalue": {
+						"x": 1
+					}
+				},
+				{
+					"name": "lightcolor",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1,
+						"w": 1
+					}
+				},
+				{
+					"name": "lightdir",
+					"type": "vec3",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1
+					}
+				},
+				{
+					"name": "ambientcolor",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1,
+						"w": 1
+					}
+				},
+				{
+					"name": "externalstrength",
+					"type": "float",
+					"defaultvalue": {
+						"x": 1
+					}
+				},
+				{
+					"name": "metallictex_uv",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 0,
+						"w": 0
+					}
+				},
+				{
+					"name": "metallictex",
+					"type": "sampler2D"
+				},
+				{
+					"name": "metallictexusage",
+					"semantic": "metallictex",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "emissivetex_uv",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 0,
+						"w": 0
+					}
+				},
+				{
+					"name": "emissivetex",
+					"type": "sampler2D"
+				},
+				{
+					"name": "emissivetexusage",
+					"semantic": "emissivetex",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "ambientintensity",
+					"type": "float",
+					"defaultvalue": {
+						"x": 1
+					}
+				},
+				{
+					"name": "roughness",
+					"type": "float",
+					"defaultvalue": {
+						"x": 0.5
+					}
+				},
+				{
+					"name": "metallic",
+					"type": "float",
+					"defaultvalue": {
+						"x": 0.5
+					}
+				},
+				{
+					"name": "envintensity",
+					"type": "float",
+					"defaultvalue": {
+						"x": 0.5
+					}
+				},
+				{
+					"name": "envtex",
+					"type": "samplerCube"
+				},
+				{
+					"name": "envtex2",
+					"type": "samplerCube"
+				},
+				{
+					"name": "envtex2usage",
+					"semantic": "envtex2",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "envtex3",
+					"type": "samplerCube"
+				},
+				{
+					"name": "envtex3usage",
+					"semantic": "envtex2",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "envmix",
+					"type": "float",
+					"defaultvalue": {
+						"x": 0.0
+					}
+				},
+				{
+					"name": "bumpscale",
+					"type": "float",
+					"defaultvalue": {
+						"x": 1.0
+					}
+				},
+				{
+					"name": "envtexusage",
+					"semantic": "envtex",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "bumptex",
+					"type": "samplertex"
+				},
+				{
+					"name": "bumptexusage",
+					"semantic": "bumptex",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "bumptex_uv",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 0,
+						"w": 0
+					}
+				},
+				{
+					"name": "consta",
+					"type": "vec3",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1,
+						"w": 1
+					}
+				},
+				{
+					"name": "constb",
+					"type": "vec3",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1,
+						"w": 1
+					}
+				},
+				{
+					"name": "constc",
+					"type": "vec3",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1,
+						"w": 1
+					}
+				},
+				{
+					"name": "usemixarkitenv",
+					"type": "int",
+					"defaultvalue": {
+						"x": 1
+					}
+				}
+			],
+			"attributes": [{
+					"name": "inVertexPosition",
+					"semantic": "inVertexPosition"
+				},
+				{
+					"name": "inVertexNormal",
+					"semantic": "inVertexNormal"
+				},
+				{
+					"name": "inVertexColor",
+					"semantic": "inVertexColor"
+				},
+				{
+					"name": "inVertexTangent",
+					"semantic": "inVertexTangent"
+				},
+				{
+					"name": "inTexCoord0",
+					"semantic": "inTexCoord0"
+				},
+				{
+					"name": "inTexCoord1",
+					"semantic": "inTexCoord1"
+				},
+				{
+					"name": "inVertexBinormal",
+					"semantic": "inVertexBinormal"
+				}
+			]
+		},
+		{
+			"vshpath": "es2/newStandardGlass.vs",
+			"fshpath": "es2/newStandardGlass.fs",
+			"es3vshpath": "es3/newStandardGlass.vs",
+			"es3fshpath": "es3/newStandardGlass.fs",
+			"metalvshpath": "metal/newStandardGlass_vs.metal",
+			"metalfshpath": "metal/newStandardGlass_fs.metal",
+			"uniforms": [{
+					"name": "_MVP",
+					"semantic": "_MVP"
+				},
+				{
+					"name": "_M",
+					"semantic": "_M"
+				},
+				{
+					"name": "_MIT",
+					"semantic": "_MIT"
+				},
+				{
+					"name": "_MVIT",
+					"semantic": "_MVIT"
+				},
+				{
+					"name": "_CameraPos",
+					"semantic": "_CameraPos"
+				},
+				{
+					"name": "color",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1,
+						"w": 1
+					}
+				},
+				{
+					"name": "albedo_uv",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 0,
+						"w": 0
+					}
+				},
+				{
+					"name": "aotex_uv",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 0,
+						"w": 0
+					}
+				},
+				{
+					"name": "albedo",
+					"type": "sampler2D"
+				},
+				{
+					"name": "albedousage",
+					"semantic": "albedo",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "usearcubemap",
+					"type": "int",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "aotex",
+					"type": "sampler2D"
+				},
+				{
+					"name": "aotexusage",
+					"semantic": "aotex",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "aointensity",
+					"type": "float",
+					"defaultvalue": {
+						"x": 1
+					}
+				},
+				{
+					"name": "lightcolor",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1,
+						"w": 1
+					}
+				},
+				{
+					"name": "lightdir",
+					"type": "vec3",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1
+					}
+				},
+				{
+					"name": "ambientcolor",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1,
+						"w": 1
+					}
+				},
+				{
+					"name": "metallictex_uv",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 0,
+						"w": 0
+					}
+				},
+				{
+					"name": "metallictex",
+					"type": "sampler2D"
+				},
+				{
+					"name": "metallictexusage",
+					"semantic": "metallictex",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "emissivetex_uv",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 0,
+						"w": 0
+					}
+				},
+				{
+					"name": "emissivetex",
+					"type": "sampler2D"
+				},
+				{
+					"name": "emissivetexusage",
+					"semantic": "emissivetex",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "ambientintensity",
+					"type": "float",
+					"defaultvalue": {
+						"x": 1
+					}
+				},
+				{
+					"name": "externalstrength",
+					"type": "float",
+					"defaultvalue": {
+						"x": 1
+					}
+				},
+				{
+					"name": "roughness",
+					"type": "float",
+					"defaultvalue": {
+						"x": 0.5
+					}
+				},
+				{
+					"name": "metallic",
+					"type": "float",
+					"defaultvalue": {
+						"x": 0.5
+					}
+				},
+				{
+					"name": "envintensity",
+					"type": "float",
+					"defaultvalue": {
+						"x": 0.5
+					}
+				},
+				{
+					"name": "envtex",
+					"type": "samplerCube"
+				},
+				{
+					"name": "envtex2",
+					"type": "samplerCube"
+				},
+				{
+					"name": "envtex2usage",
+					"semantic": "envtex2",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "envtex3",
+					"type": "samplerCube"
+				},
+				{
+					"name": "envtex3usage",
+					"semantic": "envtex2",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "envmix",
+					"type": "float",
+					"defaultvalue": {
+						"x": 0.0
+					}
+				},
+				{
+					"name": "envtexusage",
+					"semantic": "envtex",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "consta",
+					"type": "vec3",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1,
+						"w": 1
+					}
+				},
+				{
+					"name": "constb",
+					"type": "vec3",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1,
+						"w": 1
+					}
+				},
+				{
+					"name": "constc",
+					"type": "vec3",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1,
+						"w": 1
+					}
+				},
+				{
+					"name": "usemixarkitenv",
+					"type": "int",
+					"defaultvalue": {
+						"x": 1
+					}
+				}
+			],
+			"attributes": [{
+					"name": "inVertexPosition",
+					"semantic": "inVertexPosition"
+				},
+				{
+					"name": "inVertexNormal",
+					"semantic": "inVertexNormal"
+				},
+				{
+					"name": "inVertexColor",
+					"semantic": "inVertexColor"
+				},
+				{
+					"name": "inVertexTangent",
+					"semantic": "inVertexTangent"
+				},
+				{
+					"name": "inTexCoord0",
+					"semantic": "inTexCoord0"
+				},
+				{
+					"name": "inTexCoord1",
+					"semantic": "inTexCoord1"
+				},
+				{
+					"name": "inVertexBinormal",
+					"semantic": "inVertexBinormal"
+				}
+			]
+		},
+		{
+			"vshpath": "es2/newStandardBumpedGlass.vs",
+			"fshpath": "es2/newStandardBumpedGlass.fs",
+			"es3vshpath": "es3/newStandardBumpedGlass.vs",
+			"es3fshpath": "es3/newStandardBumpedGlass.fs",
+			"metalvshpath": "metal/newStandardBumpedGlass_vs.metal",
+			"metalfshpath": "metal/newStandardBumpedGlass_fs.metal",
+			"uniforms": [{
+					"name": "_MVP",
+					"semantic": "_MVP"
+				},
+				{
+					"name": "_M",
+					"semantic": "_M"
+				},
+				{
+					"name": "_MIT",
+					"semantic": "_MIT"
+				},
+				{
+					"name": "_MVIT",
+					"semantic": "_MVIT"
+				},
+				{
+					"name": "_CameraPos",
+					"semantic": "_CameraPos"
+				},
+				{
+					"name": "color",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1,
+						"w": 1
+					}
+				},
+				{
+					"name": "albedo_uv",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 0,
+						"w": 0
+					}
+				},
+				{
+					"name": "aotex_uv",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 0,
+						"w": 0
+					}
+				},
+				{
+					"name": "albedo",
+					"type": "sampler2D"
+				},
+				{
+					"name": "albedousage",
+					"semantic": "albedo",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "usearcubemap",
+					"type": "int",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "aotex",
+					"type": "sampler2D"
+				},
+				{
+					"name": "aotexusage",
+					"semantic": "aotex",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "aointensity",
+					"type": "float",
+					"defaultvalue": {
+						"x": 1
+					}
+				},
+				{
+					"name": "lightcolor",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1,
+						"w": 1
+					}
+				},
+				{
+					"name": "lightdir",
+					"type": "vec3",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1
+					}
+				},
+				{
+					"name": "ambientcolor",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1,
+						"w": 1
+					}
+				},
+				{
+					"name": "externalstrength",
+					"type": "float",
+					"defaultvalue": {
+						"x": 1
+					}
+				},
+				{
+					"name": "metallictex_uv",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 0,
+						"w": 0
+					}
+				},
+				{
+					"name": "metallictex",
+					"type": "sampler2D"
+				},
+				{
+					"name": "metallictexusage",
+					"semantic": "metallictex",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "emissivetex_uv",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 0,
+						"w": 0
+					}
+				},
+				{
+					"name": "emissivetex",
+					"type": "sampler2D"
+				},
+				{
+					"name": "emissivetexusage",
+					"semantic": "emissivetex",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "ambientintensity",
+					"type": "float",
+					"defaultvalue": {
+						"x": 1
+					}
+				},
+				{
+					"name": "roughness",
+					"type": "float",
+					"defaultvalue": {
+						"x": 0.5
+					}
+				},
+				{
+					"name": "metallic",
+					"type": "float",
+					"defaultvalue": {
+						"x": 0.5
+					}
+				},
+				{
+					"name": "envintensity",
+					"type": "float",
+					"defaultvalue": {
+						"x": 0.5
+					}
+				},
+				{
+					"name": "envtex",
+					"type": "samplerCube"
+				},
+				{
+					"name": "envtex2",
+					"type": "samplerCube"
+				},
+				{
+					"name": "envtex2usage",
+					"semantic": "envtex2",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "envtex3",
+					"type": "samplerCube"
+				},
+				{
+					"name": "envtex3usage",
+					"semantic": "envtex2",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "envmix",
+					"type": "float",
+					"defaultvalue": {
+						"x": 0.0
+					}
+				},
+				{
+					"name": "bumpscale",
+					"type": "float",
+					"defaultvalue": {
+						"x": 1.0
+					}
+				},
+				{
+					"name": "envtexusage",
+					"semantic": "envtex",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "bumptex",
+					"type": "samplertex"
+				},
+				{
+					"name": "bumptexusage",
+					"semantic": "bumptex",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "bumptex_uv",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 0,
+						"w": 0
+					}
+				},
+				{
+					"name": "consta",
+					"type": "vec3",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1,
+						"w": 1
+					}
+				},
+				{
+					"name": "constb",
+					"type": "vec3",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1,
+						"w": 1
+					}
+				},
+				{
+					"name": "constc",
+					"type": "vec3",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1,
+						"w": 1
+					}
+				},
+				{
+					"name": "usemixarkitenv",
+					"type": "int",
+					"defaultvalue": {
+						"x": 1
+					}
+				}
+			],
+			"attributes": [{
+					"name": "inVertexPosition",
+					"semantic": "inVertexPosition"
+				},
+				{
+					"name": "inVertexNormal",
+					"semantic": "inVertexNormal"
+				},
+				{
+					"name": "inVertexColor",
+					"semantic": "inVertexColor"
+				},
+				{
+					"name": "inVertexTangent",
+					"semantic": "inVertexTangent"
+				},
+				{
+					"name": "inTexCoord0",
+					"semantic": "inTexCoord0"
+				},
+				{
+					"name": "inTexCoord1",
+					"semantic": "inTexCoord1"
+				},
+				{
+					"name": "inVertexBinormal",
+					"semantic": "inVertexBinormal"
+				}
+			]
+		},
+		{
+			"vshpath": "es2/rampSkin.vs",
+			"fshpath": "es2/rampSkin.fs",
+			"es3vshpath": "es3/rampSkin.vs",
+			"es3fshpath": "es3/rampSkin.fs",
+			"metalvshpath": "metal/rampSkin_vs.metal",
+			"metalfshpath": "metal/rampSkin_fs.metal",
+			"uniforms": [{
+					"name": "_MVP",
+					"semantic": "_MVP"
+				},
+				{
+					"name": "_M",
+					"semantic": "_M"
+				},
+				{
+					"name": "_MV",
+					"semantic": "_MV"
+				},
+				{
+					"name": "_V",
+					"semantic": "_V"
+				},
+				{
+					"name": "_MIT",
+					"semantic": "_MIT"
+				},
+				{
+					"name": "_CameraPos",
+					"semantic": "_CameraPos"
+				},
+				{
+					"name": "albedo_uv",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 0,
+						"w": 0
+					}
+				},
+				{
+					"name": "masktex_uv",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 0,
+						"w": 0
+					}
+				},
+				{
+					"name": "bumptex_uv",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 0,
+						"w": 0
+					}
+				},
+				{
+					"name": "lightdir",
+					"type": "vec3",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1
+					}
+				},
+				{
+					"name": "rampintensity",
+					"type": "float",
+					"defaultvalue": {
+						"x": 1
+
+					}
+				},
+				{
+					"name": "matcapintensity",
+					"type": "float",
+					"defaultvalue": {
+						"x": 1
+
+					}
+				},
+				{
+					"name": "albedo",
+					"type": "sampler2D"
+				},
+				{
+					"name": "albedousage",
+					"semantic": "albedo",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "ramptex",
+					"type": "sampler2D"
+				},
+				{
+					"name": "ramptexusage",
+					"semantic": "ramptex",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "masktex",
+					"type": "sampler2D"
+				},
+				{
+					"name": "masktexusage",
+					"semantic": "masktex",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "matcap",
+					"type": "sampler2D"
+				},
+				{
+					"name": "matcapusage",
+					"semantic": "matcap",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "bumptex",
+					"type": "sampler2D"
+				},
+				{
+					"name": "bumptexusage",
+					"semantic": "bumptex",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "bumpscale",
+					"type": "float",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "color",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1,
+						"w": 1
+					}
+				}
+			],
+			"attributes": [{
+					"name": "inVertexPosition",
+					"semantic": "inVertexPosition"
+				},
+				{
+					"name": "inVertexNormal",
+					"semantic": "inVertexNormal"
+				},
+				{
+					"name": "inTexCoord0",
+					"semantic": "inTexCoord0"
+				},
+				{
+					"name": "inVertexColor",
+					"semantic": "inVertexColor"
+				},
+				{
+					"name": "inVertexTangent",
+					"semantic": "inVertexTangent"
+				},
+				{
+					"name": "inVertexBinormal",
+					"semantic": "inVertexBinormal"
+				}
+
+			]
+		},
+		{
+			"vshpath": "es2/hair.vs",
+			"fshpath": "es2/hair.fs",
+			"es3vshpath": "es3/hair.vs",
+			"es3fshpath": "es3/hair.fs",
+			"metalvshpath": "metal/hair_vs.metal",
+			"metalfshpath": "metal/hair_fs.metal",
+			"uniforms": [{
+					"name": "_MVP",
+					"semantic": "_MVP"
+				},
+				{
+					"name": "_M",
+					"semantic": "_M"
+				},
+				{
+					"name": "_MV",
+					"semantic": "_MV"
+				},
+				{
+					"name": "_MIT",
+					"semantic": "_MIT"
+				},
+				{
+					"name": "_CameraPos",
+					"semantic": "_CameraPos"
+				},
+				{
+					"name": "albedo_uv",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 0,
+						"w": 0
+					}
+				},
+				{
+					"name": "bumptex_uv",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 0,
+						"w": 0
+					}
+				},
+				{
+					"name": "anisotex_uv",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 0,
+						"w": 0
+					}
+				},
+				{
+					"name": "lightdir",
+					"type": "vec3",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1
+					}
+				},
+				{
+					"name": "rampintensity",
+					"type": "float",
+					"defaultvalue": {
+						"x": 1
+					}
+				},
+				{
+					"name": "bumpscale",
+					"type": "float",
+					"defaultvalue": {
+						"x": 1
+					}
+				},
+				{
+					"name": "specularmultiplier",
+					"type": "float",
+					"defaultvalue": {
+						"x": 1
+					}
+				},
+				{
+					"name": "specularmultiplier2",
+					"type": "float",
+					"defaultvalue": {
+						"x": 1
+					}
+				},
+				{
+					"name": "primaryshift",
+					"type": "float",
+					"defaultvalue": {
+						"x": 1
+					}
+				},
+				{
+					"name": "secondaryshift",
+					"type": "float",
+					"defaultvalue": {
+						"x": 1
+					}
+				},
+				{
+					"name": "specularcolor",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1,
+						"w": 1
+					}
+				},
+				{
+					"name": "specularcolor2",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1,
+						"w": 1
+					}
+				},
+				{
+					"name": "albedo",
+					"type": "sampler2D"
+				},
+				{
+					"name": "albedousage",
+					"semantic": "albedo",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "ramptex",
+					"type": "sampler2D"
+				},
+				{
+					"name": "ramptexusage",
+					"semantic": "ramptex",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "bumptex",
+					"type": "sampler2D"
+				},
+				{
+					"name": "bumptexusage",
+					"semantic": "bumptex",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+
+				{
+					"name": "anisotex",
+					"type": "sampler2D"
+				},
+				{
+					"name": "anisotexusage",
+					"semantic": "anisotex",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+
+				{
+					"name": "color",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1,
+						"w": 1
+					}
+				}
+			],
+			"attributes": [{
+					"name": "inVertexPosition",
+					"semantic": "inVertexPosition"
+				},
+				{
+					"name": "inVertexNormal",
+					"semantic": "inVertexNormal"
+				},
+				{
+					"name": "inVertexTangent",
+					"semantic": "inVertexTangent"
+				},
+				{
+					"name": "inVertexBinormal",
+					"semantic": "inVertexBinormal"
+				},
+				{
+					"name": "inVertexColor",
+					"semantic": "inVertexColor"
+				},
+				{
+					"name": "inTexCoord0",
+					"semantic": "inTexCoord0"
+				}
+
+			]
+		},
+		{
+			"vshpath": "es2/hair.vs",
+			"fshpath": "es2/hairClip.fs",
+			"es3vshpath": "es3/hair.vs",
+			"es3fshpath": "es3/hairClip.fs",
+			"metalvshpath": "metal/hair_vs.metal",
+			"metalfshpath": "metal/hair_fs.metal",
+			"uniforms": [{
+					"name": "_MVP",
+					"semantic": "_MVP"
+				},
+				{
+					"name": "_M",
+					"semantic": "_M"
+				},
+				{
+					"name": "_MV",
+					"semantic": "_MV"
+				},
+				{
+					"name": "_MIT",
+					"semantic": "_MIT"
+				},
+				{
+					"name": "_CameraPos",
+					"semantic": "_CameraPos"
+				},
+				{
+					"name": "albedo_uv",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 0,
+						"w": 0
+					}
+				},
+				{
+					"name": "bumptex_uv",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 0,
+						"w": 0
+					}
+				},
+				{
+					"name": "anisotex_uv",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 0,
+						"w": 0
+					}
+				},
+				{
+					"name": "lightdir",
+					"type": "vec3",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1
+					}
+				},
+				{
+					"name": "rampintensity",
+					"type": "float",
+					"defaultvalue": {
+						"x": 1
+					}
+				},
+				{
+					"name": "bumpscale",
+					"type": "float",
+					"defaultvalue": {
+						"x": 1
+					}
+				},
+				{
+					"name": "specularmultiplier",
+					"type": "float",
+					"defaultvalue": {
+						"x": 1
+					}
+				},
+				{
+					"name": "specularmultiplier2",
+					"type": "float",
+					"defaultvalue": {
+						"x": 1
+					}
+				},
+				{
+					"name": "primaryshift",
+					"type": "float",
+					"defaultvalue": {
+						"x": 1
+					}
+				},
+				{
+					"name": "secondaryshift",
+					"type": "float",
+					"defaultvalue": {
+						"x": 1
+					}
+				},
+				{
+					"name": "specularcolor",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1,
+						"w": 1
+					}
+				},
+				{
+					"name": "specularcolor2",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1,
+						"w": 1
+					}
+				},
+				{
+					"name": "albedo",
+					"type": "sampler2D"
+				},
+				{
+					"name": "albedousage",
+					"semantic": "albedo",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "ramptex",
+					"type": "sampler2D"
+				},
+				{
+					"name": "ramptexusage",
+					"semantic": "ramptex",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "bumptex",
+					"type": "sampler2D"
+				},
+				{
+					"name": "bumptexusage",
+					"semantic": "bumptex",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+
+				{
+					"name": "anisotex",
+					"type": "sampler2D"
+				},
+				{
+					"name": "anisotexusage",
+					"semantic": "anisotex",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "color",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1,
+						"w": 1
+					}
+				},
+				{
+					"name": "cut",
+					"type": "float",
+					"defaultvalue": {
+						"x": 0.7
+					}
+				}
+			],
+			"attributes": [{
+					"name": "inVertexPosition",
+					"semantic": "inVertexPosition"
+				},
+				{
+					"name": "inVertexNormal",
+					"semantic": "inVertexNormal"
+				},
+				{
+					"name": "inVertexTangent",
+					"semantic": "inVertexTangent"
+				},
+				{
+					"name": "inVertexBinormal",
+					"semantic": "inVertexBinormal"
+				},
+				{
+					"name": "inVertexColor",
+					"semantic": "inVertexColor"
+				},
+				{
+					"name": "inTexCoord0",
+					"semantic": "inTexCoord0"
+				}
+
+			]
+		},
+		{
+			"vshpath": "es2/eye.vs",
+			"fshpath": "es2/eye.fs",
+			"es3vshpath": "es3/eye.vs",
+			"es3fshpath": "es3/eye.fs",
+			"metalvshpath": "metal/eye_vs.metal",
+			"metalfshpath": "metal/eye_fs.metal",
+			"uniforms": [{
+					"name": "_MVP",
+					"semantic": "_MVP"
+				},
+				{
+					"name": "_M",
+					"semantic": "_M"
+				},
+                {
+                    "name": "_MIT",
+                    "semantic": "_MIT"
+                },
+                {
+                    "name": "_V",
+                    "semantic": "_V"
+                },
+				{
+					"name": "_MV",
+					"semantic": "_MV"
+				},
+				{
+					"name": "_CameraPos",
+					"semantic": "_CameraPos"
+				},
+				{
+					"name": "lightdir",
+					"type": "vec3",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1
+					}
+				},
+				{
+					"name": "scale",
+					"type": "float",
+					"defaultvalue": {
+						"x": 1
+					}
+				},
+				{
+					"name": "albedo",
+					"type": "sampler2D"
+				},
+				{
+					"name": "albedousage",
+					"semantic": "albedo",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "ramptex",
+					"type": "sampler2D"
+				},
+				{
+					"name": "ramptexusage",
+					"semantic": "ramptex",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "rampintensity",
+					"type": "float",
+					"defaultvalue": {
+						"x": 1
+					}
+				},
+				{
+					"name": "transmission",
+					"type": "float",
+					"defaultvalue": {
+						"x": 1
+					}
+				},
+				{
+					"name": "speculartex",
+					"type": "sampler2D"
+				},
+				{
+					"name": "speculartexusage",
+					"semantic": "speculartex",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+
+				{
+					"name": "matcap",
+					"type": "sampler2D"
+				},
+                {
+                    "name": "matcapintensity",
+                    "type": "float",
+                    "defaultvalue": {
+                        "x": 1
+
+                    }
+                },
+				{
+                    "name": "isflip",
+                    "type": "int",
+                    "defaultvalue": {
+                        "x": 1
+
+                    }
+                },
+				{
+					"name": "matcapusage",
+					"semantic": "matcap",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "shadowtex",
+					"type": "sampler2D"
+				},
+				{
+					"name": "shadowtexusage",
+					"semantic": "shadowtex",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "transmasktex",
+					"type": "sampler2D"
+				},
+				{
+					"name": "transmasktexusage",
+					"semantic": "transmasktex",
+					"defaultvalue": {
+						"x": 0
+					}
+				}
+			],
+			"attributes": [{
+					"name": "inVertexPosition",
+					"semantic": "inVertexPosition"
+				},
+				{
+					"name": "inVertexNormal",
+					"semantic": "inVertexNormal"
+				},
+				{
+					"name": "inTexCoord0",
+					"semantic": "inTexCoord0"
+				}
+
+			]
+		},
+		{
+			"vshpath": "es2/realSkin.vs",
+			"fshpath": "es2/realSkin.fs",
+			"es3vshpath": "es3/realSkin.vs",
+			"es3fshpath": "es3/realSkin.fs",
+			"metalvshpath": "metal/rampSkin_vs.metal",
+			"metalfshpath": "metal/rampSkin_fs.metal",
+			"uniforms": [{
+					"name": "_MVP",
+					"semantic": "_MVP"
+				},
+				{
+					"name": "_M",
+					"semantic": "_M"
+				},
+				{
+					"name": "_MV",
+					"semantic": "_MV"
+				},
+				{
+					"name": "_V",
+					"semantic": "_V"
+				},
+				{
+					"name": "_MIT",
+					"semantic": "_MIT"
+				},
+				{
+					"name": "_CameraPos",
+					"semantic": "_CameraPos"
+				},
+				{
+					"name": "albedo_uv",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 0,
+						"w": 0
+					}
+				},
+				{
+					"name": "paramtex_uv",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 0,
+						"w": 0
+					}
+				},
+				{
+					"name": "bumptex_uv",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 0,
+						"w": 0
+					}
+				},
+				{
+					"name": "lightdir",
+					"type": "vec3",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1
+					}
+				},
+				{
+					"name": "roughness",
+					"type": "float",
+					"defaultvalue": {
+						"x": 1
+
+					}
+				},
+				{
+					"name": "glossness",
+					"type": "float",
+					"defaultvalue": {
+						"x": 1
+
+					}
+				},
+				{
+					"name": "scatter",
+					"type": "float",
+					"defaultvalue": {
+						"x": 1
+
+					}
+				},
+				{
+					"name": "albedo",
+					"type": "sampler2D"
+				},
+				{
+					"name": "albedousage",
+					"semantic": "albedo",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "lookuptex",
+					"type": "sampler2D"
+				},
+				{
+					"name": "lookuptexusage",
+					"semantic": "lookuptex",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "paramtex",
+					"type": "sampler2D"
+				},
+				{
+					"name": "paramtexusage",
+					"semantic": "paramtex",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "bumptex",
+					"type": "sampler2D"
+				},
+				{
+					"name": "bumptexusage",
+					"semantic": "bumptex",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "bumpscale",
+					"type": "float",
+					"defaultvalue": {
+						"x": 0
+					}
+				},
+				{
+					"name": "color",
+					"type": "vec4",
+					"defaultvalue": {
+						"x": 1,
+						"y": 1,
+						"z": 1,
+						"w": 1
+					}
+				}
+			],
+			"attributes": [{
+					"name": "inVertexPosition",
+					"semantic": "inVertexPosition"
+				},
+				{
+					"name": "inVertexNormal",
+					"semantic": "inVertexNormal"
+				},
+				{
+					"name": "inTexCoord0",
+					"semantic": "inTexCoord0"
+				},
+				{
+					"name": "inVertexColor",
+					"semantic": "inVertexColor"
+				},
+				{
+					"name": "inVertexTangent",
+					"semantic": "inVertexTangent"
+				},
+				{
+					"name": "inVertexBinormal",
+					"semantic": "inVertexBinormal"
+				}
+
+			]
+		}
+	]
+}
