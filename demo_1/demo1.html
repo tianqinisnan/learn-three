@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>html, body {margin: 0}</style>
+</head>
+<body>
+  <script src="../vendors/three.js"></script>
+  <script>
+    //创建场景
+    const scene = new THREE.Scene()
+    //给场景添加一个背景色（默认是黑色）
+    scene.background = new THREE.Color(0xffffff)
+    //创建相机
+    const camera = new THREE.PerspectiveCamera(45, window.innerWidth/window.innerHeight, 1, 1000)
+    //给相机一个坐标
+    camera.position.set(10, 5, 10)
+    //给相机镜头设置一个拍摄坐标
+    camera.lookAt(0, 0, 0)
+    //创建一个渲染器
+    const renderer = new THREE.WebGLRenderer()
+    //设置渲染器的尺寸，即canvas画布尺寸
+    renderer.setSize(window.innerWidth, window.innerHeight)
+    //将canvas画布添加到页面中
+    document.body.appendChild(renderer.domElement)
+
+    //添加一个立方体
+    const geometry = new THREE.BoxGeometry(2, 4, 2)
+    const material = new THREE.MeshBasicMaterial({ color: 0xff6600 })
+    //为立方体添加材质
+    const cube = new THREE.Mesh(geometry, material)
+    //将立方体放入场景中
+    scene.add(cube)
+
+    //渲染更新
+    renderer.render(scene, camera)
+  </script>
+</body>
+</html>
